@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
   get '/' => "home#top"
-  get 'about' => "home#about"
+  get '/keycheck' => "keycheck#top"
+  get '/songlist' => "songlist#index"
 end
