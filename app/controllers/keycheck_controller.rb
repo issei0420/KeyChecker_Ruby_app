@@ -1,8 +1,9 @@
-require "./app/keycheck_function.rb"
 class KeycheckController < ApplicationController
 
     def top
     end
-
-
+    
+    def check_key
+        @input_codes = params[:codes]
+    end
 end

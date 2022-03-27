@@ -36,7 +36,7 @@ keys = [C_Major, Cs_Major, D_Major, Ds_Major, E_Major, F_Major, Fs_Major, G_Majo
         ]
 
 #キーを判定
-def keycheck(input_codes, keys, key_names)
+def keycheckfunc(input_codes, keys, key_names)
     
     #ハッシュを作成
     key_map = {}

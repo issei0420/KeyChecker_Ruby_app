@@ -1,0 +1,19 @@
+<header>
+  <div class="header-logo">
+    <a href="/">Top</a>
+  </div>
+</header>
+
+<div class="keycheck_title">
+  <h3>コードを選択してください</h3>
+</div>
+
+<div class="select_code">
+  <%= form_tag("/keycheck/check_key") do %>
+    <textarea name="codes"></textarea>
+    <input type="submit" value="投稿">
+  <% end %>
+</div>
+
+
+  
