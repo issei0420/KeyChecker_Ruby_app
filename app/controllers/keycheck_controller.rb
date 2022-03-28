@@ -15,8 +15,9 @@ class KeycheckController < ApplicationController
             code = input_note + input_acc
             @input_codes.push(code)
         end
-
-        @input_codes
+        
+        a = KeycheckFunction.new
+        @determined_key = a.keycheckfunc(@input_codes)
 
 
     end
