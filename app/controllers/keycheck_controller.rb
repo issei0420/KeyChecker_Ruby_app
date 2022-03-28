@@ -5,13 +5,19 @@ class KeycheckController < ApplicationController
     end
     
     def check_key
-        @params = params
-        # input_codes = []
-        # 6.times do |timesCount|
-        #     input_node = params["node#{timesCount}"]             
-        #     input_acc = params["acc#{timesCount}"]
-        #     code = input_node + input_acc
-        #     @input_codes.add(code)
-        # end
+        
+        num_codes = params[:note].length
+
+        @input_codes = []
+        num_codes.times do |timesCount|
+            input_note = params[:note][timesCount]
+            input_acc = params[:acc][timesCount]
+            code = input_note + input_acc
+            @input_codes.push(code)
+        end
+
+        @input_codes
+
+
     end
 end
