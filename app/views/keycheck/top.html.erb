@@ -8,38 +8,33 @@
   <h3>コードを選択してください</h3>
 </div>
 
-<div class="select_code">
+<div class="input_form">
   <%= form_tag("/keycheck/check_key") do %>
-    <textarea name="codes"></textarea>
-    <input type="submit" value="投稿">
-  <% end %>
-</div>
-
-<%= form_tag("/keycheck/check_key") do %>
-  <%= 6.times do |timesCount| %>
-    <div class="select_area">
-      <select name="note[]"%>> 
-          <option Value="null" disabled selected>選択して下さい</option>
-          <option value="C">C</option>
-          <option value="D">D</option>
-          <option value="E">E</option>
-          <option value="F">F</option>
-          <option value="G">G</option>
-          <option value="A">A</option>
-          <option value="B">B</option><!-- CHECK -->
-      </select>
-      <select name=<%="acc#{timesCount}"%>>
-          <option Value="null" disabled selected>選択して下さい</option>
-          <option ngValue="null"></option>
-          <option value="m">m</option>
-          <option value="♭">♭</option>
-          <option value="#">#</option>
-          <option value="#m">#m</option><!-- CHECK -->
-      </select>
+    <% 6.times do |timesCount| %>
+      <div class="select_area">
+        <select name="note[]"%>>
+            <option Value="null" disabled selected>選択して下さい</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+            <option value="A">A</option>
+            <option value="B">B</option><!-- CHECK -->
+        </select>
+        <select name=<%="acc[]"%>>
+            <option Value="null" disabled selected>選択して下さい</option>
+            <option ngValue="null"></option>
+            <option value="m">m</option>
+            <option value="♭">♭</option>
+            <option value="#">#</option>
+            <option value="#m">#m</option><!-- CHECK -->
+        </select>
+      </div>
+    <% end %>
+    <div>
+      <input type="submit" value="送信">
     </div>
   <% end %>
-  <div>
-    <input type="submit" value="送信">
-  </div>
-<% end %>
+</div>
   
